@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 
@@ -9,7 +10,7 @@ app.get("/api", (req, res) => {
   });
   
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../project/build', 'index.html'));
   });
     
 app.listen(PORT, () => {
