@@ -11,7 +11,7 @@ app.get("/api", (req, res) => {
   
   app.get('*', (req, res) => {
     console.log(__dirname);
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
+    res.sendFile(path.resolve(__dirname, '../project/build', 'index.html'))
   });
     
 app.listen(PORT, () => {
