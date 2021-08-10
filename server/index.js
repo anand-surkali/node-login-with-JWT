@@ -8,7 +8,7 @@ const app = express();
 
 app.get("/api", (req, res) => {
     res.json({ message: "Hello from server!" });
-  });
+});
   
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../project/build')));
